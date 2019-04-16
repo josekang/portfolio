@@ -1,37 +1,39 @@
 {% extends "base.html" %}
 {% block content %}
+
+<!-- THE BELOW CODE IS THE HOME SECTION TOGETHER WITH THE CAROUSEL-->
 <div class="bd-example">
   <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="static/sl1.jpg" height="629px" width="100%" alt="...">
+        <img src="static/sl1.jpg" height="706px" width="100%" alt="...">
         <div class="carousel-caption d-none d-md-block">
           <div class="text">
           <h2 style="color:#00FFFF; font-weight:normal; font-family:Comic Sans MS;">Hello, I'm <span class="highlight">Joseph Kang'ethe</span>.</h2>
           <br>
           <h3 style="color:#00FFFF; font-weight:normal; font-family:Comic Sans MS;">I'm a full-stack web developer.</h3>
-          <a href="about"><button type="button" class="btn btn-outline-secondary" style="color:#00FFFF; font-weight:normal; font-family:Comic Sans MS;">View My Work</button></a>
+          <button id="about" type="button" class="btn btn-outline-secondary" style="color:#00FFFF; font-weight:normal; font-family:Comic Sans MS;">View My Work</button>
         </div>
 
         </div>
       </div>
       <div class="carousel-item">
-        <img src="static/sl2.jpg" height="629px" width="100%" alt="...">
+        <img src="static/sl2.jpg" height="706px" width="100%" alt="...">
         <div class="carousel-caption d-none d-md-block">
           <div class="text">
           <h2 style="color:#00FFFF; font-weight:normal; font-family:Comic Sans MS;">“The most important property of a program is whether it accomplishes the intention of its user.”</h2>
           <br>
           <h3 style="color:#00FFFF; font-weight:normal; font-family:Comic Sans MS;">― C.A.R. Hoare.</h3>
-          <a href="about"><button type="button" class="btn btn-outline-secondary" style="color:#00FFFF; font-weight:normal; font-family:Comic Sans MS;">View My Work</button></a>
+          <button id="about" type="button" class="btn btn-outline-secondary" style="color:#00FFFF; font-weight:normal; font-family:Comic Sans MS;">View My Work</button>
         </div>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="static/sl3.jpg" height="629px" width="100%" alt="...">
+        <img src="static/sl3.jpg" height="706px" width="100%" alt="...">
         <div class="carousel-caption d-none d-md-block">
           <div class="text">
           <h3 style="color:#330000; font-weight:normal; font-family:Comic Sans MS;">“I'm a programmer. I like programming. And the best way I've found to have a positive impact on code is to write it.”</h3>
-          <a href="about"><button type="button" class="btn btn-outline-secondary" style="color:#330000; font-weight:normal; font-family:Comic Sans MS;">View My Work</button></a>
+          <button id="about" type="button" class="btn btn-outline-secondary" style="color:#330000; font-weight:normal; font-family:Comic Sans MS;">View My Work</button>
         </div>
         </div>
       </div>
@@ -39,9 +41,45 @@
 
   </div>
 </div>
+<hr>
+<br>
+<br>
+<br>
+<br>
+<!--THE END OF THE HOME SECTION AND THE CAROUSEL-->
 
+<!-- THE BELOW SECTION IS THE CODE FOR THE ABOUT US PAGE-->
+<!-- Top content -->
+<div class="home" id="about">
+    <h1 style="text-align:center">ABOUT</h1><br>
+    <p></p><br><br><p></p>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm">
+              <img src="static/sp.png" alt="" height="100" width="100"><br>
+                  <h2>Fast</h2>
+              One of three columns
+          </div>
 
-<!-- The below section is the code for the ABOUT US PAGE-->
-<h1 class="text-center">ABOUT</h1>
+          <div class="col-sm">
+            <img src="static/cp.png" alt="" height="100" width="100"><br>
+                <h2>Responsive</h2>
+              One of three columns
+          </div>
+
+          <div class="col-sm">
+            <img src="static/bul.png" alt="" height="100" width="100"><br>
+                <h2>Intuitive</h2>
+              One of three columns
+          </div>
+
+          <div class="col-sm">
+              <img src="static/ro.png" alt="" height="100" width="100"><br>
+                  <h2>Dynamic</h2>
+              One of three columns
+          </div>
+        </div>
+      </div>
+</div>
 <!-- The above section is the code for the ABOUT US PAGE-->
 {% endblock %}
