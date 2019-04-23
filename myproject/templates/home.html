@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<!-- THE BELOW CODE IS THE HOME SECTION TOGETHER WITH THE CAROUSEL-->
+<!-- THE START: THE BELOW CODE IS THE HOME SECTION TOGETHER WITH THE CAROUSEL-->
 <div class="bd-example">
   <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
@@ -45,8 +45,9 @@
 <br>
 <br>
 <!--THE END OF THE HOME SECTION AND THE CAROUSEL-->
+<!-- ***************************************************************************************************************** -->
 
-<!-- THE BELOW SECTION IS THE CODE FOR THE ABOUT US PAGE-->
+<!-- THE START: THE BELOW SECTION IS THE CODE FOR THE ABOUT US PAGE-->
 <!-- Top content -->
 <div id="about">
      <u style="text-decoration:overline;"><h1 style="text-align:center">ABOUT</h1></u><br>
@@ -79,9 +80,11 @@
         </div>
       </div>
 </div><br><br><br>
-<!-- THE ABOVE CODE IS FOR THE ABOUT US PAGE-->
+<!-- THE END: THE ABOVE CODE IS FOR THE ABOUT US PAGE-->
+<!-- ***************************************************************************************************************** -->
 
-<!-- THIS  SECTION IS FOR THE ABOUT SKILLS THAT I POSSES -->
+
+<!-- THE START: THIS  SECTION BELOW IS FOR THE ABOUT SKILLS THAT I POSSES -->
 
 <div class="container-fluid">
   <div class="row">
@@ -135,6 +138,8 @@ I have serious passion for <span style="margin-left:36px;">Restful APIs and Back
 <br>
 
 <!--THE END: THE CODE ABOVE IS FOR THE ABOUT SKILLS AND HERE IT IS WHERE IT ENDS -->
+<!-- ***************************************************************************************************************** -->
+
 
 <!--THE START: THE BELOW CODE IS FOR THE PORTFOLIO SECTION-->
 
@@ -164,9 +169,10 @@ I have serious passion for <span style="margin-left:36px;">Restful APIs and Back
 <br><br><br><br><br>
 
 <!--THE END: THE CODE ABOVE IS FOR THE PORTFOLIO AND THIS IS WHERE IT ENDS-->
+<!-- ***************************************************************************************************************** -->
 
 
-<!-- THIS  SECTION IS FOR THE BLOG LAYOUT THAT I FIND INTERESTING FOR MY ESTEEMED USERS TO GO THROUGH -->
+<!-- THE START: HIS  SECTION BELOW IS FOR THE BLOG LAYOUT THAT I FIND INTERESTING FOR MY ESTEEMED USERS TO GO THROUGH -->
 
 <div id="blog">
      <u style="text-decoration:overline;"><h1 style="text-align:center">BLOG</h1></u><br>
@@ -214,12 +220,53 @@ I have serious passion for <span style="margin-left:36px;">Restful APIs and Back
                  to use method than Redux, and more...</p>
           </div>
         </div>
-      </div>
+      </div><br><br><br><br><br><br><br><br><br><br>
 
 <!--THE END: THE CODE ABOVE IS FOR THE BLOG SECTION AND THIS IS WHERE IT ENDS-->
+<!-- ***************************************************************************************************************** -->
 
 
-<!--THE CODES BELOW SHOWS MY CONTACT INFORMATION WHICH CLIENTS CAN USE TO REACH OUT TO ME-->
+<!--THE START: HE CODES BELOW SHOWS MY CONTACT INFORMATION WHICH CLIENTS CAN USE TO REACH OUT TO ME-->
+
+<div id="contact" style="background-color:#333333;"><br><br><br><br>
+     <u style="text-decoration:overline; color:#ffffff;"><h1 style="text-align:center; color:#ffffff;">CONTACT</h1></u><br>
+    <p></p>
+      <div class="container">
+        <h4 style="text-align:center; color:#0099FF; font-family:Comic Sans MS;">Have a question or want to work together?</h4>
+
+{% if success %}
+<p style= "font-size: 40px; color:#00FF00; font-family:Comic Sans MS; text-align: center;">Thank you for reaching Out. I will get back to you shortly. Stay happy-:)</p>
+<a href="http://127.0.0.1:5000/" ><p style="text-align:center; font-size: 35px;">Click Me</p></a>
+{% else %}
+{% for message in form.name.errors %}
+<div class="flash alert alert-danger">{{ message }}</div>
+{% endfor %}
+
+{% for message in form.email.errors %}
+<div class="flash alert alert-danger">{{ message }}</div>
+{% endfor %}
+
+{% for message in form.subject.errors %}
+<div class="flash alert alert-danger">{{ message }}</div>
+{% endfor %}
+
+{% for message in form.message.errors %}
+<div class="flash alert alert-danger">{{ message }}</div>
+{% endfor %}
+
+<form action="{{ url_for('home') }}" method="POST">
+{{ form.hidden_tag() }}
+{{ form.name.label(class="form-control-plaintext") }}{{ form.name(class="col-sm-2 col-form-label") }}
+{{ form.email.label(class="form-control-plaintext") }}{{ form.email(class="col-sm-2 col-form-label") }}
+{{ form.subject.label(class="form-control-plaintext") }}{{ form.subject(class="col-sm-2 col-form-label") }}
+{{ form.message.label(class="form-control-plaintext") }}{{ form.message(class="col-sm-2 col-form-label") }}<br>
+{{ form.submit(class="btn btn-primary") }}
+
+</form>
+
+{% endif %}
+
+      </div>
 
 <!--THE END: THE CODE ABOVE IS FOR THE CONTACT INFORMATION SECTION AND THIS IS WHERE IT ENDS-->
 {% endblock %}
