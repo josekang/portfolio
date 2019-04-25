@@ -263,10 +263,65 @@ I have serious passion for <span style="margin-left:36px;">Restful APIs and Back
 {{ form.submit(class="btn btn-primary") }}
 
 </form>
+<!--
+<form action="{{ url_for('home') }}" method="POST">
+{{ form.csrf }}
+<div class="form-group">
+<label for="name">Name:</label>
+<input type="text" class="form-control" id="name" name="name" placeholder="What's your name?">
+
+<label for="email">Email:</label>
+<input type="text" class="form-control" id="email" name="email" placeholder="Your email will be used to contact you.">
+
+<label for="subject">Subject:</label>
+<input type="text" class="form-control" id="subject" name="subject" placeholder="The aim of the message">
+
+<label for="message">Message:</label>
+<textarea class="form-control" id="message" rows="3"></textarea>
+<!-- <input type="textarea" class="form-control" id="subject" name="subject" placeholder="Your Message"> -->
+
+<!-- </div>
+<button type="submit" class="btn btn-success">Send</button>
+</form> -->
 
 {% endif %}
 
       </div>
+
+      <!-- <form action="" method="POST" role="form">
+    {{ form.csrf }}
+<div class="form-group">
+      <label for="name">Name:</label>
+<input type="text" class="form-control" id="name" name="name" placeholder="What's your name?">
+
+<label for="email">Email:</label>
+<input type="text" class="form-control" id="email" name="email" placeholder="Your email will be used to contact you.">
+
+<label for="subject">Subject:</label>
+<input type="text" class="form-control" id="subject" name="subject" placeholder="The aim of the message">
+
+<label for="message">Message:</label>
+<textarea class="form-control" id="message" rows="3"></textarea>
+<!-- <input type="textarea" class="form-control" id="subject" name="subject" placeholder="Your Message"> -->
+
+<!-- </div>
+<button type="submit" class="btn btn-success">Send</button>
+</form>{% with messages = get_flashed_messages(with_categories=true) %} -->
+<!-- {% if messages %} -->
+
+<!-- {% for message in messages %} -->
+<!-- {% if "Error" not in message[1]: %} -->
+<!-- <div class="alert alert-info">
+                <strong>Success! </strong> {{ message[1] }}</div>
+{% endif %}
+
+{% if "Error" in message[1]: %}
+<div class="alert alert-warning">
+                {{ message[1] }}</div> -->
+<!-- {% endif %} -->
+<!-- {% endfor %} -->
+<!-- {% endif %} -->
+<!-- {% endwith %} --> -->
 
 <!--THE END: THE CODE ABOVE IS FOR THE CONTACT INFORMATION SECTION AND THIS IS WHERE IT ENDS-->
 {% endblock %}
