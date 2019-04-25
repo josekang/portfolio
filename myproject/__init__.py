@@ -29,6 +29,7 @@ Migrate(app, db)
 
 mail.__init__(app)
 
+
 class ContactForm(FlaskForm):
     name = TextField("Name", validators = [DataRequired("The name field cannot be empty")])
     email = TextField("Email", validators = [DataRequired(), Email("please enter a valid email address")])
